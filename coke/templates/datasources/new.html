@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>New Datasource</h1>
+</div>
+
+<%= form_for(datasource, {action: datasourcesPath(), method: "POST"}) { %>
+  <%= partial("datasources/form.html") %>
+  <a href="<%= datasourcesPath() %>" class="btn btn-warning" data-confirm="Are you sure?">Cancel</a>
+<% } %>

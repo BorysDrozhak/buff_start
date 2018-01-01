@@ -1,0 +1,39 @@
+<div class="page-header">
+  <h1>Datasources</h1>
+</div>
+<ul class="list-unstyled list-inline">
+  <li><a href="<%= newDatasourcesPath() %>" class="btn btn-primary">Create New Datasource</a></li>
+</ul>
+
+<table class="table table-striped">
+  <thead>
+  <th>Name</th>
+    <th>Fqdn</th>
+    <th>Port</th>
+    <th>Type</th>
+    <th>Secured</th>
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <%= for (datasource) in datasources { %>
+      <tr>
+      <td><%= datasource.Name %></td>
+        <td><%= datasource.Fqdn %></td>
+        <td><%= datasource.Port %></td>
+        <td><%= datasource.Type %></td>
+        <td><%= datasource.Secured %></td>
+        <td>
+          <div class="pull-right">
+            <a href="<%= datasourcePath({ datasource_id: datasource.ID }) %>" class="btn btn-info">View</a>
+            <a href="<%= editDatasourcePath({ datasource_id: datasource.ID }) %>" class="btn btn-warning">Edit</a>
+            <a href="<%= datasourcePath({ datasource_id: datasource.ID }) %>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+          </div>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginator(pagination) %>
+</div>

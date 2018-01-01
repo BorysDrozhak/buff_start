@@ -1,0 +1,8 @@
+create_table("datasources", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("name", "string", {})
+	t.Column("fqdn", "string", {})
+	t.Column("port", "integer", {})
+	t.Column("type", "integer", {})
+	t.Column("secured", "bool", {})
+})
