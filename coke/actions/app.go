@@ -60,7 +60,8 @@ func App() *buffalo.App {
 
 		app.Resource("/users", UsersResource{&buffalo.BaseResource{}})
 		app.Resource("/datasources", DatasourcesResource{&buffalo.BaseResource{}})
-		
+
+		app.Resource("/datasourcestypes", DatasourcestypesResource{&buffalo.BaseResource{}})
 	}
 
 	return app

@@ -1,0 +1,6 @@
+- id: "datasourcestype.created.success"
+  translation: "Datasourcestype was successfully created."
+- id: "datasourcestype.updated.success"
+  translation: "Datasourcestype was successfully updated."
+- id: "datasourcestype.destroyed.success"
+  translation: "Datasourcestype was successfully destroyed."
